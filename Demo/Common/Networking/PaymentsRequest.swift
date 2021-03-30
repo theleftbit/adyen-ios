@@ -5,8 +5,10 @@
 //
 
 import Adyen
-import AdyenActions
 import AdyenNetworking
+#if canImport(AdyenActions)
+    import AdyenActions
+#endif
 import Foundation
 
 internal struct PaymentsRequest: APIRequest {
