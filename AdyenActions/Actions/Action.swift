@@ -63,11 +63,10 @@ public enum Action: Decodable {
     
     /// :nodoc:
     private static func handleQRCodeType(from decoder: Decoder) throws -> Action {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        if (try? container.decode(QRCodePaymentMethod.self, forKey: .paymentMethodType)) != nil {
-            return .qrCode(try QRCodeAction(from: decoder))
-        } else {
+        if try decoder.container(keyedBy: CodingKeys.self).contains(.url) {
             return .redirect(try RedirectAction(from: decoder))
+        } else {
+            return .qrCode(try QRCodeAction(from: decoder))
         }
     }
     
@@ -84,7 +83,7 @@ public enum Action: Decodable {
 
     private enum CodingKeys: String, CodingKey {
         case type
-        case paymentMethodType
+        case url
     }
     
 }
