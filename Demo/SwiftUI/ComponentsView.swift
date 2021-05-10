@@ -7,6 +7,7 @@
 import Adyen
 import AdyenSwiftUI
 import SwiftUI
+import PassKit
 
 internal struct ComponentsView: View {
 
@@ -17,25 +18,25 @@ internal struct ComponentsView: View {
             List {
                 ForEach(viewModel.items, id: \.self) { section in
                     Section(content: {
-                        ForEach(section, id: \.self) { item in
-                            Button(action: {
-                                item.selectionHandler()
-                            }, label: {
-                                Text(item.title)
-                                    .frame(maxWidth: .infinity)
-                            })
-                        }
-
+                        ForEach(section, id: \.self, content: getButton)
                     })
                 }
             }
-            .listStyle(GroupedListStyle())
-            .navigationBarTitle("Components")
+            .navigationBarTitle("Components", displayMode: .inline)
             .navigationBarItems(trailing: configurationButton)
             .present(viewController: $viewModel.viewControllerToPresent)
             .onAppear {
                 self.viewModel.viewDidAppear()
             }
+        }.navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    @ViewBuilder
+    private func getButton(with item: ComponentsItem) -> some View {
+        if item.isApplePay {
+            getApplePayButton(with: item)
+        } else {
+            getRegularButton(with: item)
         }
     }
 
@@ -44,20 +45,50 @@ internal struct ComponentsView: View {
             Image(systemName: "gear")
         })
     }
+    
+    private func getRegularButton(with item: ComponentsItem) -> some View {
+        Button(action: {
+            item.selectionHandler()
+        }, label: {
+            Text(item.title)
+                .frame(maxWidth: .infinity)
+        })
+    }
+    
+    private func getApplePayButton(with item: ComponentsItem) -> some View {
+        Button(action: item.selectionHandler,
+               label: { Text("") })
+            .buttonStyle(ApplePayButtonStyle())
+            .frame(height: 44.0)
+            .padding(2.0)
+    }
+}
+
+private struct ApplePayButton: UIViewRepresentable {
+    
+    func updateUIView(_ uiView: PKPaymentButton, context: Context) {
+        
+    }
+    
+    func makeUIView(context: Context) -> PKPaymentButton {
+        return PKPaymentButton(paymentButtonType: .plain, paymentButtonStyle: .black)
+    }
+    
+}
+
+private struct ApplePayButtonStyle: SwiftUI.ButtonStyle {
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        return ApplePayButton()
+    }
+    
 }
 
 // swiftlint:disable:next type_name
 internal struct ContentView_Previews: PreviewProvider {
+    
     internal static var previews: some View {
         ComponentsView()
     }
-}
-
-extension EdgeInsets {
-    static var zero: EdgeInsets {
-        EdgeInsets(top: 0,
-                   leading: 0,
-                   bottom: 0,
-                   trailing: 0)
-    }
+    
 }

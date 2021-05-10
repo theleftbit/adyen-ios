@@ -39,6 +39,10 @@ internal final class PaymentsViewModel: ObservableObject, Identifiable, Presente
     internal func presentMBWayComponent() {
         integrationExample.presentMBWayComponent()
     }
+    
+    internal func presentApplePayComponent() {
+        integrationExample.presentApplePayComponent()
+    }
 
     internal func viewDidAppear() {
         items = [
@@ -50,6 +54,9 @@ internal final class PaymentsViewModel: ObservableObject, Identifiable, Presente
                 ComponentsItem(title: "iDEAL", selectionHandler: presentIdealComponent),
                 ComponentsItem(title: "SEPA Direct Debit", selectionHandler: presentSEPADirectDebitComponent),
                 ComponentsItem(title: "MB WAY", selectionHandler: presentMBWayComponent)
+            ],
+            [
+                ComponentsItem(title: "Apple Pay", selectionHandler: presentApplePayComponent)
             ]
         ]
         integrationExample.requestPaymentMethods()
