@@ -4,56 +4,24 @@ set -e # Any subsequent(*) commands which fail will cause the shell script to ex
 
 function echo_header {
   echo " "
-  echo "===   $1"
-}
-
-function print_help {
-  echo "Test Carthage Integration"
-  echo " "
-  echo "test-carthage-integration [project name] [arguments]"
-  echo " "
-  echo "options:"
-  echo "-h, --help                show brief help"
-  echo "-c, --no-clean            ignore cleanup"
+  echo "#############   $1   ###############"
 }
 
 PROJECT_NAME=TempProject
-NEED_CLEANUP=true
 
-while test $# -gt 0; do
-  case "$1" in
-    -h|--help)
-      print_help
-      exit 0
-      ;;
-    -c|--no-clean)
-      NEED_CLEANUP=false
-      shift
-      ;;
-    -p|--project)
-      PROJECT_NAME="$1"
-      shift
-      ;;
-  esac
-done
+echo_header "Clean up $PROJECT_NAME"
+rm -rf $PROJECT_NAME
+mkdir -p $PROJECT_NAME && cd $PROJECT_NAME
 
-if [ "$NEED_CLEANUP" == true ]
-then
-  echo_header "Clean up $PROJECT_NAME"
-  rm -rf $PROJECT_NAME
-  mkdir -p $PROJECT_NAME && cd $PROJECT_NAME
+echo_header "Setup Carthage"
+CWD=$(pwd)
+CURRENT_COMMIT=$(git rev-parse HEAD)
 
-  echo_header "Setup Carthage"
-  CWD=$(pwd)
-  CURRENT_COMMIT=$(git rev-parse HEAD)
+echo "git \"file://$CWD/../\" \"$CURRENT_COMMIT\"" > Cartfile
+../Scripts/carthage.sh update --use-xcframeworks
 
-  echo "git \"file://$CWD/../\" \"$CURRENT_COMMIT\"" > Cartfile
-  ../Scripts/carthage.sh update --use-xcframeworks
-else
-  cd $PROJECT_NAME
-fi
 
-echo_header "Generate Project"
+echo_header "Create a new Xcode project."
 echo "
 name: $PROJECT_NAME
 targets:
@@ -63,9 +31,9 @@ targets:
     sources: Source
     testTargets: [UITests,UnitTests]
     settings:
-      base:
-        INFOPLIST_FILE: Source/UIKit/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: com.adyen.$PROJECT_NAME
+      PRODUCT_BUNDLE_IDENTIFIER: com.adyen.$PROJECT_NAME
+      CURRENT_PROJECT_VERSION: 1
+      MARKETING_VERSION: 1
     dependencies:
       - framework: Carthage/Build/Adyen.xcframework
         embed: true
@@ -117,7 +85,8 @@ schemes:
         UITests: [test]
         UnitTests: [test]
     test:
-      commandLineArguments: "-UITests"
+      commandLineArguments: 
+        "-UITests": true
       targets:
         - UITests
         - UnitTests
@@ -127,9 +96,8 @@ schemes:
 mkdir -p UITests
 mkdir -p UnitTests
 mkdir -p Source
-cp "../Tests/AdyenTests/Adyen Tests/DropIn/DropInTests.swift" Tests/DropInTests.swift
-cp "../Tests/AdyenTests/Adyen Tests/Components/Dummy.swift" Tests/Dummy.swift
-cp "../Tests/AdyenTests/Adyen Tests/Assets/AssetsAccessTests.swift" UnitTests/AssetsAccessTests.swift
+cp "../Tests/AdyenTests/Adyen Tests/DropIn/DropInTests.swift" UITests/DropInTests.swift
+cp "../Tests/AdyenTests/Adyen Tests/Components/Dummy.swift" UITests/Dummy.swift
 cp -a "../Demo/Common" Source/
 cp -a "../Demo/UIKit" Source/
 cp "../Demo/Configuration.swift" Source/Configuration.swift
@@ -139,9 +107,6 @@ xcodegen generate
 echo_header "Run Tests"
 xcodebuild build test -project $PROJECT_NAME.xcodeproj -scheme App -destination "name=iPhone 11" | xcpretty && exit ${PIPESTATUS[0]}
 
-if [ "$NEED_CLEANUP" == true ]
-then
-  echo_header "Clean up"
-  cd ../
-  rm -rf $PROJECT_NAME
-fi
+echo_header "Clean up"
+cd ../
+rm -rf $PROJECT_NAME

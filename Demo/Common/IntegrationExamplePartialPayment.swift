@@ -5,11 +5,21 @@
 //
 
 import Adyen
-import AdyenActions
-import AdyenCard
-import AdyenComponents
-import AdyenDropIn
-import AdyenNetworking
+#if canImport(AdyenCard)
+    import AdyenCard
+#endif
+#if canImport(AdyenComponents)
+    import AdyenComponents
+#endif
+#if canImport(AdyenActions)
+    import AdyenActions
+#endif
+#if canImport(AdyenDropIn)
+    import AdyenDropIn
+#endif
+#if canImport(AdyenNetworking)
+    import AdyenNetworking
+#endif
 import UIKit
 
 extension IntegrationExample: PartialPaymentDelegate {
