@@ -39,7 +39,7 @@
 "adyen.emailItem.title" = "E-mail-cím";
 "adyen.emailItem.placeHolder" = "E-mail-cím";
 "adyen.emailItem.invalid" = "Érvénytelen e-mail-cím";
-"adyen.moreOptions" = "";
+"adyen.moreOptions" = "További lehetőségek";
 "adyen.mbway.confirmPayment" = "Fizetés jóváhagyása az MB WAY alkalmazásban";
 "adyen.await.waitForConfirmation" = "Várakozás a jóváhagyásra";
 "adyen.blik.confirmPayment" = "A fizetés jóváhagyásához nyissa meg a banki alkalmazást.";
@@ -66,6 +66,8 @@
 "adyen.voucher.readInstructions" = "Olvassa el az utasításokat";
 "adyen.voucher.saveImage" = "Save as image";
 "adyen.voucher.finish" = "Finish";
+"adyen.card.brazilSSN.placeholder" = "123.123.123-12";
+"adyen.amount" = "amount";
 "adyen.pix.instructions" = "";
 "adyen.pix.expirationLabel" = "Fizetéshez rendelkezésre álló idő: %@";
 "adyen.pix.copyButton" = "Kód másolása";
@@ -108,9 +110,14 @@
 "adyen.giftcard.currencyError" = "Az ajándékkártyák csak abban a pénznemben érvényesek, amelyre kiállították azokat";
 "adyen.giftcard.noBalance" = "Az ajándékkártya egyenlege nulla";
 "adyen.partialPayment.remainingBalance" = "A fennmaradó egyenleg %@ lesz";
+"adyen.partialPayment.payRemainingAmount" = "Fizetési mód választása a fennmaradó %@ számára";
 "adyen.card.taxNumber.label" = "Kártyatulajdonos születési dátuma (ÉÉHHNN) vagy cégjegyzékszám (10 számjegyű)";
 "adyen.card.taxNumber.placeholder" = "ÉÉHHNN / 0123456789";
 "adyen.card.taxNumber.invalid" = "A kártyatulajdonos születési dátuma vagy a cégjegyzékszám érvénytelen";
 "adyen.card.encryptedPassword.label" = "Kártya jelszavának első 2 számjegye";
 "adyen.card.encryptedPassword.placeholder" = "12";
 "adyen.card.encryptedPassword.invalid" = "Érvénytelen jelszó";
+"adyen.card.taxNumber.label.short" = "Születési dátum vagy cégjegyzékszám";
+"adyen.affirm.deliveryAddressToggle.title" = "Eltérő szállítási cím";
+"adyen.voucher.shopperReference" = "Vásárlói referencia";
+"adyen.voucher.alternativeReference" = "Alternatív hivatkozás";

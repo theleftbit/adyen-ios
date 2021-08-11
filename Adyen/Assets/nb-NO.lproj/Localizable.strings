@@ -39,7 +39,7 @@
 "adyen.emailItem.title" = "E-postadresse";
 "adyen.emailItem.placeHolder" = "E-postadresse";
 "adyen.emailItem.invalid" = "Ugyldig e-postadresse";
-"adyen.moreOptions" = "";
+"adyen.moreOptions" = "Flere alternativer";
 "adyen.mbway.confirmPayment" = "Bekreft betalingen din i MB WAY-appen";
 "adyen.await.waitForConfirmation" = "Venter på bekreftelse";
 "adyen.blik.confirmPayment" = "Åpne bank-appen din for å bekrefte betalingen.";
@@ -66,6 +66,8 @@
 "adyen.voucher.readInstructions" = "Les instruksjoner";
 "adyen.voucher.saveImage" = "Save as image";
 "adyen.voucher.finish" = "Finish";
+"adyen.card.brazilSSN.placeholder" = "123.123.123-12";
+"adyen.amount" = "amount";
 "adyen.pix.instructions" = "";
 "adyen.pix.expirationLabel" = "Du har %@ igjen til å betale";
 "adyen.pix.copyButton" = "Kopier kode";
@@ -108,9 +110,14 @@
 "adyen.giftcard.currencyError" = "Gavekort er kun gyldige i den valutaen de ble utstedt i";
 "adyen.giftcard.noBalance" = "Dette gavekortet har en saldo på null";
 "adyen.partialPayment.remainingBalance" = "Gjenværende saldo vil være %@";
+"adyen.partialPayment.payRemainingAmount" = "Velg betalingsmetode for de gjenstående %@";
 "adyen.card.taxNumber.label" = "Kortholders fødselsdato (YYMMDD) eller bedriftsregistreringsnummer (10 siffer)";
 "adyen.card.taxNumber.placeholder" = "YYMMDD / 0123456789";
 "adyen.card.taxNumber.invalid" = "Ugyldig kortholders fødselsdato eller bedriftsregistreringsnummer";
 "adyen.card.encryptedPassword.label" = "Første 2 sifre av kortpassord";
 "adyen.card.encryptedPassword.placeholder" = "12";
 "adyen.card.encryptedPassword.invalid" = "Ugyldig passord";
+"adyen.card.taxNumber.label.short" = "Fødselsdato eller bedriftsregistreringsnummer";
+"adyen.affirm.deliveryAddressToggle.title" = "Avvikende leveringsadresse";
+"adyen.voucher.shopperReference" = "Kundereferanse";
+"adyen.voucher.alternativeReference" = "Alternativ referanse";

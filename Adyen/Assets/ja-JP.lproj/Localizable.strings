@@ -39,7 +39,7 @@
 "adyen.emailItem.title" = "Eメールアドレス";
 "adyen.emailItem.placeHolder" = "Eメールアドレス";
 "adyen.emailItem.invalid" = "Eメールアドレスが無効です";
-"adyen.moreOptions" = "";
+"adyen.moreOptions" = "その他のオプション";
 "adyen.mbway.confirmPayment" = "MB WAYアプリで支払を確認する";
 "adyen.await.waitForConfirmation" = "確認を待っています";
 "adyen.blik.confirmPayment" = "バンキングアプリを開いて、支払を確認してください。";
@@ -66,6 +66,8 @@
 "adyen.voucher.readInstructions" = "手順を参照してください";
 "adyen.voucher.saveImage" = "Save as image";
 "adyen.voucher.finish" = "Finish";
+"adyen.card.brazilSSN.placeholder" = "123.123.123-12";
+"adyen.amount" = "amount";
 "adyen.pix.instructions" = "";
 "adyen.pix.expirationLabel" = "%@をお支払い下さい。";
 "adyen.pix.copyButton" = "コードをコピー";
@@ -108,9 +110,14 @@
 "adyen.giftcard.currencyError" = "ギフトカードは、発行された通貨でのみ有効です。";
 "adyen.giftcard.noBalance" = "このギフトカードの残高はゼロです";
 "adyen.partialPayment.remainingBalance" = "残りの残高は%@になります";
+"adyen.partialPayment.payRemainingAmount" = "残りの%@の支払方法を選択してください";
 "adyen.card.taxNumber.label" = "カード所有者の生年月日（YYMMDD）または法人登録番号（10桁）";
 "adyen.card.taxNumber.placeholder" = "年月日（YYMMDD）/ 0123456789";
 "adyen.card.taxNumber.invalid" = "カード所有者の生年月日または法人登録番号が無効です";
 "adyen.card.encryptedPassword.label" = "カードのパスワードの最初の2桁";
 "adyen.card.encryptedPassword.placeholder" = "12";
 "adyen.card.encryptedPassword.invalid" = "パスワードが無効です";
+"adyen.card.taxNumber.label.short" = "生年月日または法人登録番号";
+"adyen.affirm.deliveryAddressToggle.title" = "別の配送先住所";
+"adyen.voucher.shopperReference" = "購入者向け参考情報";
+"adyen.voucher.alternativeReference" = "別の参照";

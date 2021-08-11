@@ -39,7 +39,7 @@
 "adyen.emailItem.title" = "E-postadress";
 "adyen.emailItem.placeHolder" = "E-postadress";
 "adyen.emailItem.invalid" = "Ogiltig e-postadress";
-"adyen.moreOptions" = "";
+"adyen.moreOptions" = "Fler alternativ";
 "adyen.mbway.confirmPayment" = "Bekräfta din betalning i appen MB WAY";
 "adyen.await.waitForConfirmation" = "Väntar på bekräftelse";
 "adyen.blik.confirmPayment" = "Öppna din bankapp för att bekräfta betalningen.";
@@ -66,6 +66,8 @@
 "adyen.voucher.readInstructions" = "Läs instruktionerna";
 "adyen.voucher.saveImage" = "Save as image";
 "adyen.voucher.finish" = "Finish";
+"adyen.card.brazilSSN.placeholder" = "123.123.123-12";
+"adyen.amount" = "amount";
 "adyen.pix.instructions" = "";
 "adyen.pix.expirationLabel" = "Du har %@ att betala";
 "adyen.pix.copyButton" = "Kopiera kod";
@@ -108,9 +110,14 @@
 "adyen.giftcard.currencyError" = "Presentkort är endast giltiga i den valuta som de utfärdades i";
 "adyen.giftcard.noBalance" = "Saldot för detta presentkort är noll";
 "adyen.partialPayment.remainingBalance" = "Återstående saldo blir %@";
+"adyen.partialPayment.payRemainingAmount" = "Välj betalningssätt för återstående %@";
 "adyen.card.taxNumber.label" = "Kortinnehavarens födelsedatum (ÅÅMMDD) eller företagets organisationsnummer (10 siffror)";
 "adyen.card.taxNumber.placeholder" = "ÅÅMMDD / 0123456789";
 "adyen.card.taxNumber.invalid" = "Ogiltigt födelsedatum eller organisationsnummer";
 "adyen.card.encryptedPassword.label" = "De två första siffrorna i kortets lösenord";
 "adyen.card.encryptedPassword.placeholder" = "12";
 "adyen.card.encryptedPassword.invalid" = "Ogiltigt lösenord";
+"adyen.card.taxNumber.label.short" = "Födelsedatum eller företagets organisationsnummer";
+"adyen.affirm.deliveryAddressToggle.title" = "Separat leveransadress";
+"adyen.voucher.shopperReference" = "Köparreferens";
+"adyen.voucher.alternativeReference" = "Alternativ referens";

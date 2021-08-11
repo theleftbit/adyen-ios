@@ -39,7 +39,7 @@
 "adyen.emailItem.title" = "E-mailová adresa";
 "adyen.emailItem.placeHolder" = "E-mailová adresa";
 "adyen.emailItem.invalid" = "Neplatná e-mailová adresa";
-"adyen.moreOptions" = "";
+"adyen.moreOptions" = "Další možnosti";
 "adyen.mbway.confirmPayment" = "Potvrďte platbu v aplikaci MB WAY";
 "adyen.await.waitForConfirmation" = "Čeká se na potvrzení";
 "adyen.blik.confirmPayment" = "Spusťte bankovní aplikaci a potvrďte platbu.";
@@ -66,6 +66,8 @@
 "adyen.voucher.readInstructions" = "Přečtěte si pokyny";
 "adyen.voucher.saveImage" = "Save as image";
 "adyen.voucher.finish" = "Finish";
+"adyen.card.brazilSSN.placeholder" = "123.123.123-12";
+"adyen.amount" = "amount";
 "adyen.pix.instructions" = "";
 "adyen.pix.expirationLabel" = "Na zaplacení vám zbývá %@";
 "adyen.pix.copyButton" = "Kopírovat kód";
@@ -108,9 +110,14 @@
 "adyen.giftcard.currencyError" = "Dárkové karty jsou platné jenom v měně, ve které byly vystavené";
 "adyen.giftcard.noBalance" = "Na dárkové kartě je nulový zůstatek";
 "adyen.partialPayment.remainingBalance" = "Zbývající zůstatek bude %@";
+"adyen.partialPayment.payRemainingAmount" = "Zvolte, jakým způsobem se má %@ zaplatit";
 "adyen.card.taxNumber.label" = "Datum narození držitele karty (RRMMDD) nebo registrační číslo společnosti (10 číslic)";
 "adyen.card.taxNumber.placeholder" = "RRMMDD / 0123456789";
 "adyen.card.taxNumber.invalid" = "Neplatné datum narození držitele karty nebo registrační číslo společnosti";
 "adyen.card.encryptedPassword.label" = "První 2 číslice hesla karty";
 "adyen.card.encryptedPassword.placeholder" = "12";
 "adyen.card.encryptedPassword.invalid" = "Neplatné heslo";
+"adyen.card.taxNumber.label.short" = "Datum narození nebo registrační číslo společnosti";
+"adyen.affirm.deliveryAddressToggle.title" = "Dodací adresa odlišná od fakturační";
+"adyen.voucher.shopperReference" = "Číslo kupujícího";
+"adyen.voucher.alternativeReference" = "Náhradní číslo";

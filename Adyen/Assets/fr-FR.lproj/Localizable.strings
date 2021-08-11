@@ -39,7 +39,7 @@
 "adyen.emailItem.title" = "Adresse e-mail";
 "adyen.emailItem.placeHolder" = "Adresse e-mail";
 "adyen.emailItem.invalid" = "Adresse e-mail incorrecte";
-"adyen.moreOptions" = "";
+"adyen.moreOptions" = "Plus d'options";
 "adyen.mbway.confirmPayment" = "Confirmez votre paiement sur l'application MB WAY";
 "adyen.await.waitForConfirmation" = "En attente de confirmation";
 "adyen.blik.confirmPayment" = "Ouvrez votre application bancaire pour confirmer le paiement.";
@@ -66,6 +66,8 @@
 "adyen.voucher.readInstructions" = "Lire les instructions";
 "adyen.voucher.saveImage" = "Save as image";
 "adyen.voucher.finish" = "Finish";
+"adyen.card.brazilSSN.placeholder" = "123.123.123-12";
+"adyen.amount" = "amount";
 "adyen.pix.instructions" = "";
 "adyen.pix.expirationLabel" = "Vous avez %@ pour payer cette somme";
 "adyen.pix.copyButton" = "Copier le code";
@@ -108,9 +110,14 @@
 "adyen.giftcard.currencyError" = "Les cartes cadeaux sont valables uniquement dans la devise dans laquelle elles ont été émises";
 "adyen.giftcard.noBalance" = "Aucun solde n'est disponible sur cette carte cadeau";
 "adyen.partialPayment.remainingBalance" = "Le solde restant sera de %@";
+"adyen.partialPayment.payRemainingAmount" = "Sélectionnez un mode de paiement pour régler le solde de %@";
 "adyen.card.taxNumber.label" = "Date de naissance du porteur de carte (au format AAMMJJ) ou numéro d'identification de l'entreprise (à 10 chiffres)";
 "adyen.card.taxNumber.placeholder" = "AAMMJJ / 0123456789";
 "adyen.card.taxNumber.invalid" = "Date de naissance du porteur de carte ou numéro d'identification de l'entreprise incorrect(e)";
 "adyen.card.encryptedPassword.label" = "Les deux premiers chiffres du code de votre carte";
 "adyen.card.encryptedPassword.placeholder" = "12";
 "adyen.card.encryptedPassword.invalid" = "Code incorrect";
+"adyen.card.taxNumber.label.short" = "Date de naissance ou numéro d'identification de l'entreprise";
+"adyen.affirm.deliveryAddressToggle.title" = "Adresse de livraison distincte";
+"adyen.voucher.shopperReference" = "Référence client";
+"adyen.voucher.alternativeReference" = "Autre référence";

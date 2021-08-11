@@ -39,7 +39,7 @@
 "adyen.emailItem.title" = "이메일 주소";
 "adyen.emailItem.placeHolder" = "이메일 주소";
 "adyen.emailItem.invalid" = "유효하지 않은 이메일 주소";
-"adyen.moreOptions" = "";
+"adyen.moreOptions" = "옵션 더 보기";
 "adyen.mbway.confirmPayment" = "MB WAY 앱에서 결제를 확인하십시오";
 "adyen.await.waitForConfirmation" = "확인 대기중";
 "adyen.blik.confirmPayment" = "뱅킹 앱을 열어서 결제를 확인하세요.";
@@ -66,6 +66,8 @@
 "adyen.voucher.readInstructions" = "안내 읽기";
 "adyen.voucher.saveImage" = "Save as image";
 "adyen.voucher.finish" = "Finish";
+"adyen.card.brazilSSN.placeholder" = "123.123.123-12";
+"adyen.amount" = "amount";
 "adyen.pix.instructions" = "";
 "adyen.pix.expirationLabel" = "남은 결제 시한: %@";
 "adyen.pix.copyButton" = "코드 복사하기";
@@ -108,10 +110,14 @@
 "adyen.giftcard.currencyError" = "기프트 카드는 발급된 통화로만 사용하실 수 있습니다";
 "adyen.giftcard.noBalance" = "이 기프트 카드에는 잔액이 없습니다";
 "adyen.partialPayment.remainingBalance" = "남은 잔액은 %@입니다";
+"adyen.partialPayment.payRemainingAmount" = "남은 %@에 대한 결제 수단 선택";
 "adyen.card.taxNumber.label" = "카드 소유자 생년월일(예: 870130) 또는 법인 등록 번호(10자리)";
 "adyen.card.taxNumber.placeholder" = "YYMMDD / 0123456789";
 "adyen.card.taxNumber.invalid" = "유효하지 않은 카드 소유자 생년월일 또는 법인 등록 번호";
 "adyen.card.encryptedPassword.label" = "카드 비밀번호 첫 2자리";
 "adyen.card.encryptedPassword.placeholder" = "12";
 "adyen.card.encryptedPassword.invalid" = "유효하지 않은 번호";
-"adyen.card.taxNumber.label.short" = "생년월일 또는 법인등록번호";
+"adyen.card.taxNumber.label.short" = "생년월일 또는 법인 등록 번호";
+"adyen.affirm.deliveryAddressToggle.title" = "별도의 배송 주소";
+"adyen.voucher.shopperReference" = "구매자 참조번호";
+"adyen.voucher.alternativeReference" = "대체 참조번호";
