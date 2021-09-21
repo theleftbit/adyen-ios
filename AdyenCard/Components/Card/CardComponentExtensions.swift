@@ -107,7 +107,6 @@ public extension CardComponent {
     ///   - paymentMethod: The card payment method.
     ///   - publicKey: The key used for encrypting card data.
     ///   - style: The Component's UI style.
-    @available(*, deprecated, message: "Use init(paymentMethod:clientKey:style:) instead.")
     convenience init(paymentMethod: AnyCardPaymentMethod,
                      publicKey: String,
                      style: FormComponentStyle = FormComponentStyle()) {

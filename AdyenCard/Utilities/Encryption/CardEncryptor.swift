@@ -77,7 +77,6 @@ public enum CardEncryptor {
     /// Describes the error that can occur during card encryption and public key fetching.
     public enum Error: Swift.Error, LocalizedError {
         /// Indicates an unknown error occurred.
-        @available(*, deprecated, message: "This case is deprecated.")
         case unknown
         
         /// Indicates encryption failed  because of invalid card public key or for some other unknown reason.

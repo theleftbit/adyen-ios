@@ -29,7 +29,6 @@ public struct NavigationStyle: TintableStyle {
                                     textAlignment: .natural)
     
     /// :nodoc:
-    @available(*, deprecated, message: "Use backgroundColor instead.")
     public var barBackgroundColor: UIColor {
         get { backgroundColor }
         
@@ -37,7 +36,6 @@ public struct NavigationStyle: TintableStyle {
     }
     
     /// :nodoc:
-    @available(*, deprecated, message: "Use tintColor instead.")
     public var barTintColor: UIColor {
         get { tintColor ?? UIColor.AdyenCore.defaultBlue }
         set { tintColor = newValue }

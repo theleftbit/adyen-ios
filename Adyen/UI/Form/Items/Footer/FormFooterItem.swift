@@ -8,7 +8,6 @@ import Foundation
 
 /// A form item that represents a footer, including a submit button.
 /// :nodoc:
-@available(*, deprecated, message: "The `FormFooterItem` is deprecated. Use FormButtonItem and FormLabelItem instead")
 public final class FormFooterItem: FormItem {
     
     /// Indicates the `FormFooterItemView` UI styling.

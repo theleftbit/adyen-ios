@@ -16,7 +16,6 @@ public struct ImageStyle: TintableStyle {
     public var borderWidth: CGFloat
     
     /// The image's corner radius.
-    @available(*, deprecated, message: "Use cornerRounding instead.")
     public var cornerRadius: CGFloat {
         get {
             guard case let .fixed(value) = cornerRounding else { return 0 }

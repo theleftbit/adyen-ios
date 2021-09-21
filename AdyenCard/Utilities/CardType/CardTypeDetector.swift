@@ -10,7 +10,6 @@ import Foundation
 /// Detects the card type for any given card number.
 /// The card type detections are always estimations, as a card type
 /// can never be detected with 100% accuraccy on the client side.
-@available(*, deprecated, message: "Use extension for `[CardType] instead")
 public final class CardTypeDetector {
     
     /// The types to detect.
@@ -25,7 +24,6 @@ public final class CardTypeDetector {
     ///
     /// - Parameter cardNumber: The card number to retrieve the type of. The number is expected to be sanitized (digits only).
     /// - Returns: The type for the given card number, or `nil` if it could not be found.
-    @available(*, deprecated, message: "Use extension for `[CardType].adyen.type(forCardNumber:)` instead.")
     public func type(forCardNumber cardNumber: String) -> CardType? {
         return detectableTypes.adyen.type(forCardNumber: cardNumber)
     }
@@ -34,7 +32,6 @@ public final class CardTypeDetector {
     ///
     /// - Parameter cardNumber: The card number to retrieve the types for. The number is expected to be sanitized (digits only).
     /// - Returns: The possible types for the given card number.
-    @available(*, deprecated, message: "Use extension for `[CardType].adyen.types(forCardNumber:)` instead.")
     public func types(forCardNumber cardNumber: String) -> [CardType] {
         return detectableTypes.adyen.types(forCardNumber: cardNumber)
     }

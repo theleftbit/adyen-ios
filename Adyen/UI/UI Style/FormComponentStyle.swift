@@ -23,7 +23,6 @@ public struct FormComponentStyle: ViewStyle {
     public var `switch` = FormSwitchItemStyle()
     
     /// The footer style.
-    @available(*, deprecated, message: "The `footer` property is deprecated. Use `mainButton` and `footerNote` instead.")
     public var footer: FormFooterStyle
 
     /// The helper message style.
@@ -32,7 +31,6 @@ public struct FormComponentStyle: ViewStyle {
                                             textAlignment: .natural)
     
     /// The main button style.
-    @available(*, deprecated, message: "Use mainButtonItem instead.")
     public var mainButton: ButtonStyle {
         get { mainButtonItem.button }
         
@@ -42,7 +40,6 @@ public struct FormComponentStyle: ViewStyle {
     }
     
     /// The secondary button style.
-    @available(*, deprecated, message: "Use secondaryButtonItem instead.")
     public var secondaryButton: ButtonStyle {
         get { secondaryButtonItem.button }
         

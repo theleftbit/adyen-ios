@@ -21,7 +21,6 @@ public final class Observable<ValueType: Equatable>: EventPublisher {
     // MARK: - Value
     
     /// The observable value.
-    @available(*, deprecated, message: "Use the Swift 5.1 property wrapper syntax instead.")
     public var value: ValueType {
         get {
             wrappedValue

@@ -162,7 +162,6 @@ public class ApplePayComponent: NSObject, PaymentComponent, PresentableComponent
     /// - Throws: `ApplePayComponent.Error.invalidSummaryItem` if at least one of the summary items has an invalid amount.
     /// - Throws: `ApplePayComponent.Error.invalidCountryCode` if the `payment.countryCode` is not a valid ISO country code.
     /// - Throws: `ApplePayComponent.Error.invalidCurrencyCode` if the `payment.amount.currencyCode` is not a valid ISO currency code.
-    @available(*, deprecated, message: "Use init(paymentMethod:payment:configuration:) instead.")
     public convenience init(paymentMethod: ApplePayPaymentMethod,
                             payment: Payment,
                             merchantIdentifier: String,
@@ -183,7 +182,6 @@ public class ApplePayComponent: NSObject, PaymentComponent, PresentableComponent
     /// - Parameter merchantIdentifier: The merchant identifier.
     /// - Parameter summaryItems: The line items for this payment.
     /// - Parameter cancelHandler: Being called on cancel, e.g. when the user taps "cancel".
-    @available(*, deprecated, message: "Use init(paymentMethod:payment:merchantIdentifier:summaryItems:) instead.")
     public init?(paymentMethod: ApplePayPaymentMethod, merchantIdentifier: String, summaryItems: [PKPaymentSummaryItem], cancelHandler: (() -> Void)? = nil) {
         let configuration = Configuration(summaryItems: summaryItems,
                                           merchantIdentifier: merchantIdentifier,

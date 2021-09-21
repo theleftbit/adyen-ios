@@ -26,11 +26,6 @@ public final class MBWayComponent: PaymentComponent, PresentableComponent, Local
     
     /// Indicates if form will show a large header title. True - show title; False - assign title to a view controller's title.
     /// Defaults to true.
-    @available(*, deprecated, message: """
-     The `showsLargeTitle` property is deprecated.
-     For Component title, please, introduce your own lable implementation.
-     You can access componet's title from `viewController.title`.
-    """)
     public var showsLargeTitle: Bool {
         get {
             guard !_isDropIn else { return false }

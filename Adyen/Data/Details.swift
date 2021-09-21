@@ -10,7 +10,6 @@ import Foundation
 public protocol Details: Encodable {
     
     /// An encoded representation of the details.
-    @available(*, deprecated, message: "Use `encodable` property instead.")
     var dictionaryRepresentation: [String: Any] { get }
     
 }
